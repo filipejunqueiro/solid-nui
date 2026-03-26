@@ -1,7 +1,7 @@
 {
   "name": "solid-nui",
   "version": "0.0.0",
-  "description": "A starter for creating a TypeScript package.",
+  "description": "Type-safe NUI communication utilities built for SolidJS",
   "license": "LGPL-3.0-or-later",
   "author": "Filipe Junqueiro",
   "repository": {
