@@ -1,6 +1,6 @@
 {
   "name": "solid-nui",
-  "version": "0.0.0",
+  "version": "0.9.0",
   "description": "Type-safe NUI communication utilities built for SolidJS",
   "license": "LGPL-3.0-or-later",
   "author": "Filipe Junqueiro",
