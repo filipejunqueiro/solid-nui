@@ -1,9 +1,19 @@
-export interface SendArgs<T = unknown> {
+export interface ISendArgs<T = unknown> {
   action: string;
+  mockData?: T;
+}
+
+export interface ITrigger<T = unknown> {
+  id: string;
   data?: T;
 }
 
-export interface ReceiveArgs<T = unknown> {
+export interface IReceiveArgs<TData = unknown> {
   action: string;
-  callback: (data: T) => void;
+  callback: (data: TData) => void;
+}
+
+export interface IEventPayload<T = unknown> {
+  action: string;
+  data: T;
 }

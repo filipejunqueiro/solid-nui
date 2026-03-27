@@ -1,12 +1,18 @@
 import { expect, test } from "vite-plus/test";
 import { nui, noop, inBrowser, resourceName } from "../src/index";
+import { createRoot } from "solid-js";
 
 test("nui.send", () => {
-  expect(nui.send({ action: "test" })).toBeInstanceOf(Promise);
+  const result = createRoot(() => nui.send({ action: "test" }));
+
+  expect(result).toHaveProperty("trigger");
+  expect(result).toHaveProperty("data");
 });
 
 test("nui.receive", () => {
-  expect(nui.receive({ action: "test", callback: noop })).toBeUndefined();
+  const result = createRoot(() => nui.receive({ action: "test", callback: noop }));
+
+  expect(result).toBeUndefined();
 });
 
 test("inBrowser", () => {
